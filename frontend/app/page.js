@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const API = "https://sentinelops-qql6.onrender.com"
+const API = "https://sentinelops-qql6.onrender.com";
 
 function StatusBadge({ status, risk }) {
   const label =
@@ -31,10 +31,14 @@ export default function Infrastructure() {
   }, []);
 
   const healthy = servers.filter((s) => s.risk < 55).length;
+
   const atRisk = servers.filter(
     (s) => s.risk >= 55 && s.risk < 80
   ).length;
-  const critical = servers.filter((s) => s.risk >= 80).length;
+
+  const critical = servers.filter(
+    (s) => s.risk >= 80
+  ).length;
 
   async function openServer(id) {
     try {
@@ -48,10 +52,13 @@ export default function Infrastructure() {
 
   return (
     <main className="infra-page">
+
       <header className="infra-header">
         <div>
           <p className="eyebrow">SENTINELOPS INFRASTRUCTURE</p>
+
           <h1>Infrastructure</h1>
+
           <p className="muted">
             Real-time health and predictive risk across production services.
           </p>
@@ -62,13 +69,17 @@ export default function Infrastructure() {
         </div>
       </header>
 
+      {/* Navigation */}
       <nav className="infra-nav">
         <a href="/">← Overview</a>
         <a href="/ai-analysis">AI Analysis</a>
         <a href="/incidents">Incidents</a>
+        <a href="/settings">Settings</a>
       </nav>
 
+      {/* Summary */}
       <section className="infra-summary">
+
         <div className="card">
           <span className="stat-label">TOTAL SERVICES</span>
           <strong>{servers.length}</strong>
@@ -92,17 +103,23 @@ export default function Infrastructure() {
           <strong>{critical}</strong>
           <small>Immediate attention</small>
         </div>
+
       </section>
 
+      {/* Services */}
       <section className="card infrastructure-card">
+
         <div className="section-title">
           <div>
             <h2>Production Services</h2>
-            <p>Click a service to inspect its telemetry and AI risk.</p>
+            <p>
+              Click a service to inspect its telemetry and AI risk.
+            </p>
           </div>
         </div>
 
         <div className="service-table">
+
           <div className="service-head">
             <span>SERVICE</span>
             <span>STATUS</span>
@@ -114,11 +131,13 @@ export default function Infrastructure() {
           </div>
 
           {servers.map((server) => (
+
             <button
               className="service-row"
               key={server.id}
               onClick={() => openServer(server.id)}
             >
+
               <div>
                 <b>{server.name}</b>
                 <small>{server.id}</small>
@@ -142,7 +161,9 @@ export default function Infrastructure() {
               <span>{server.latency} ms</span>
 
               <span>{server.error_rate}%</span>
+
             </button>
+
           ))}
 
           {servers.length === 0 && (
@@ -150,18 +171,24 @@ export default function Infrastructure() {
               Loading infrastructure services...
             </div>
           )}
+
         </div>
+
       </section>
 
+      {/* Service Modal */}
       {selected && (
+
         <div
           className="modal-backdrop"
           onClick={() => setSelected(null)}
         >
+
           <div
             className="modal"
             onClick={(e) => e.stopPropagation()}
           >
+
             <button
               className="close"
               onClick={() => setSelected(null)}
@@ -169,7 +196,9 @@ export default function Infrastructure() {
               ×
             </button>
 
-            <p className="eyebrow">SERVICE TELEMETRY</p>
+            <p className="eyebrow">
+              SERVICE TELEMETRY
+            </p>
 
             <h2>{selected.name}</h2>
 
@@ -177,7 +206,9 @@ export default function Infrastructure() {
               {selected.risk}%
             </div>
 
-            <p className="muted">Predicted failure risk</p>
+            <p className="muted">
+              Predicted failure risk
+            </p>
 
             <hr />
 
@@ -222,13 +253,19 @@ export default function Infrastructure() {
 
                 <div className="confidence">
                   Model confidence:{" "}
-                  <b>{selected.analysis.confidence}%</b>
+                  <b>
+                    {selected.analysis.confidence}%
+                  </b>
                 </div>
               </>
             )}
+
           </div>
+
         </div>
+
       )}
+
     </main>
   );
 }
