@@ -1112,3 +1112,58 @@
     gap: 15px;
   }
 }
+/* =========================================================
+   INFRASTRUCTURE - FIX WHITE TABLE ROWS
+   ========================================================= */
+
+.infra-table,
+.infra-table-head,
+.infra-row {
+  background-color: #0c121d !important;
+}
+
+.infra-row {
+  color: #dce5f1 !important;
+  border: 0 !important;
+  border-top: 1px solid #172131 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.infra-row:hover {
+  background-color: #111a27 !important;
+}
+
+.infra-row:focus,
+.infra-row:focus-visible,
+.infra-row:active {
+  background-color: #111a27 !important;
+  color: #dce5f1 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.infra-row span,
+.infra-row b,
+.infra-row strong,
+.infra-row small {
+  color: inherit !important;
+}
+
+.infra-row > span:first-child b {
+  color: #e9eef7 !important;
+}
+
+.infra-row > span:first-child small {
+  color: #59687d !important;
+}
+
+.infra-row > strong {
+  color: #dce5f1 !important;
+}
+
+.infra-table-head {
+  color: #59687d !important;
+}
