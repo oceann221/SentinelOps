@@ -1167,3 +1167,104 @@
 .infra-table-head {
   color: #59687d !important;
 }
+/* =========================================================
+   FINAL INFRASTRUCTURE ROW FIX
+   ========================================================= */
+
+.infra-table {
+  width: 100%;
+  overflow-x: auto;
+  background: #0c121d !important;
+}
+
+.infra-table-head {
+  display: grid !important;
+  grid-template-columns: 2fr 1.15fr .7fr .8fr .9fr .9fr .95fr !important;
+  min-width: 900px;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 14px !important;
+  background: #0c121d !important;
+  color: #59687d !important;
+}
+
+.infra-row {
+  display: grid !important;
+  grid-template-columns: 2fr 1.15fr .7fr .8fr .9fr .9fr .95fr !important;
+  min-width: 900px;
+  width: 100%;
+
+  align-items: center;
+  gap: 14px;
+
+  margin: 0 !important;
+  padding: 15px 14px !important;
+
+  /* THIS FIXES THE WHITE ROW */
+  background: #0c121d !important;
+  background-color: #0c121d !important;
+
+  color: #dce5f1 !important;
+
+  border: 0 !important;
+  border-top: 1px solid #172131 !important;
+  border-radius: 0 !important;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 400;
+
+  text-align: left;
+  cursor: pointer;
+
+  appearance: none !important;
+  -webkit-appearance: none !important;
+
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.infra-row:hover {
+  background: #111a27 !important;
+  background-color: #111a27 !important;
+}
+
+.infra-row:focus,
+.infra-row:focus-visible {
+  background: #111a27 !important;
+  background-color: #111a27 !important;
+  color: #dce5f1 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.infra-row:active {
+  background: #151f2e !important;
+  background-color: #151f2e !important;
+}
+
+.infra-row > span,
+.infra-row > strong {
+  color: #dce5f1 !important;
+  background: transparent !important;
+}
+
+.infra-row > span:first-child b {
+  display: block;
+  color: #e9eef7 !important;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.infra-row > span:first-child small {
+  display: block;
+  margin-top: 4px;
+  color: #59687d !important;
+  font-size: 9px;
+}
+
+.infra-row > strong {
+  color: #dce5f1 !important;
+  font-size: 14px;
+  font-weight: 700;
+}
