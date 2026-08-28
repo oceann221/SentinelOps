@@ -1112,10 +1112,7 @@
     gap: 15px;
   }
 }
-/* =========================================================
-   INFRASTRUCTURE - FIX WHITE TABLE ROWS
-   ========================================================= */
-
+  
 .infra-table,
 .infra-table-head,
 .infra-row {
@@ -1167,9 +1164,6 @@
 .infra-table-head {
   color: #59687d !important;
 }
-/* =========================================================
-   FINAL INFRASTRUCTURE ROW FIX
-   ========================================================= */
 
 .infra-table {
   width: 100%;
@@ -1268,22 +1262,7 @@
   font-size: 14px;
   font-weight: 700;
 }
-/* FINAL FIX - INFRASTRUCTURE TABLE */
 
-.infra-table-head {
-  width: 100%;
-  min-width: 900px;
-  display: grid !important;
-  grid-template-columns: 2fr 1.15fr .7fr .8fr .9fr .9fr .95fr !important;
-  align-items: center;
-  gap: 14px;
-  padding: 0 14px 12px;
-  background: transparent !important;
-  color: #59687d;
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: .9px;
-}
 
 .infra-row {
   width: 100%;
@@ -1309,7 +1288,7 @@
 }
 
 .infra-row:hover {
-  background: #111a27 !important;
+  background: #121127 !important;
 }
 
 .infra-row > span:first-child b {
