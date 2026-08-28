@@ -1268,3 +1268,72 @@
   font-size: 14px;
   font-weight: 700;
 }
+/* FINAL FIX - INFRASTRUCTURE TABLE */
+
+.infra-table-head {
+  width: 100%;
+  min-width: 900px;
+  display: grid !important;
+  grid-template-columns: 2fr 1.15fr .7fr .8fr .9fr .9fr .95fr !important;
+  align-items: center;
+  gap: 14px;
+  padding: 0 14px 12px;
+  background: transparent !important;
+  color: #59687d;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .9px;
+}
+
+.infra-row {
+  width: 100%;
+  min-width: 900px;
+  display: grid !important;
+  grid-template-columns: 2fr 1.15fr .7fr .8fr .9fr .9fr .95fr !important;
+  align-items: center;
+  gap: 14px;
+
+  border: 0 !important;
+  border-top: 1px solid #172131 !important;
+  border-radius: 0 !important;
+
+  background: #0c121d !important;
+  color: #dce5f1 !important;
+
+  text-align: left;
+  padding: 15px 14px;
+  cursor: pointer;
+  transition: .2s;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.infra-row:hover {
+  background: #111a27 !important;
+}
+
+.infra-row > span:first-child b {
+  display: block;
+  font-size: 12px;
+}
+
+.infra-row > span:first-child small {
+  display: block;
+  color: #59687d;
+  font-size: 9px;
+  margin-top: 4px;
+}
+
+.infra-row > span:not(:first-child),
+.infra-row > strong {
+  font-size: 11px;
+}
+
+.infra-row > strong {
+  font-size: 14px;
+}
+
+.infra-table {
+  width: 100%;
+  overflow-x: auto;
+}
