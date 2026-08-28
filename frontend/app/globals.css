@@ -1316,3 +1316,179 @@
   width: 100%;
   overflow-x: auto;
 }
+
+/* OVERVIEW SERVICE TABLE FIX */
+.infrastructure-card {
+  background: #0c121d !important;
+  border: 1px solid #1d2838 !important;
+}
+
+.service-table {
+  width: 100%;
+  overflow-x: auto;
+  background: #0c121d !important;
+}
+
+.service-head {
+  display: grid;
+  grid-template-columns: 2fr 1fr .8fr .8fr .9fr .9fr 1fr;
+  min-width: 900px;
+  gap: 14px;
+  padding: 12px 14px;
+  background: #0c121d !important;
+  color: #59687d !important;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr .8fr .8fr .9fr .9fr 1fr;
+  min-width: 900px;
+  width: 100%;
+  gap: 14px;
+  align-items: center;
+  padding: 15px 14px;
+  margin: 0;
+  background: #0c121d !important;
+  background-color: #0c121d !important;
+  color: #dce5f1 !important;
+  border: 0 !important;
+  border-top: 1px solid #172131 !important;
+  border-radius: 0 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  text-align: left;
+  cursor: pointer;
+}
+
+.service-row:hover,
+.service-row:focus,
+.service-row:active {
+  background: #111a27 !important;
+  background-color: #111a27 !important;
+  color: #dce5f1 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.service-row span,
+.service-row b,
+.service-row strong,
+.service-row small {
+  color: inherit !important;
+  background: transparent !important;
+}
+
+.service-risk {
+  color: #dce5f1 !important;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.empty-services {
+  background: #0c121d !important;
+  color: #8b99ad !important;
+  padding: 20px;
+}
+/* =========================================================
+   SENTINELOPS - SERVICE TABLE DARK FIX
+   ========================================================= */
+
+.infrastructure-card {
+  background: #0c121d !important;
+  border: 1px solid #1d2838 !important;
+}
+
+.service-table {
+  width: 100%;
+  overflow-x: auto;
+  background: #0c121d !important;
+}
+
+.service-head {
+  display: grid !important;
+  grid-template-columns: 2fr 1.1fr .7fr .8fr .9fr .9fr .95fr;
+  min-width: 900px;
+  gap: 14px;
+  padding: 12px 14px;
+  background: #0c121d !important;
+  color: #59687d !important;
+  font-size: 9px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.service-row {
+  display: grid !important;
+  grid-template-columns: 2fr 1.1fr .7fr .8fr .9fr .9fr .95fr;
+  min-width: 900px;
+  width: 100%;
+  gap: 14px;
+  align-items: center;
+
+  padding: 15px 14px !important;
+  margin: 0 !important;
+
+  background: #0c121d !important;
+  background-color: #0c121d !important;
+  color: #dce5f1 !important;
+
+  border: 0 !important;
+  border-top: 1px solid #172131 !important;
+  border-radius: 0 !important;
+
+  appearance: none !important;
+  -webkit-appearance: none !important;
+
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.service-row:hover {
+  background: #111a27 !important;
+  background-color: #111a27 !important;
+}
+
+.service-row:focus,
+.service-row:focus-visible,
+.service-row:active {
+  background: #111a27 !important;
+  background-color: #111a27 !important;
+  color: #dce5f1 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.service-row span,
+.service-row b,
+.service-row strong,
+.service-row small {
+  background: transparent !important;
+  color: #dce5f1 !important;
+}
+
+.service-row > span:first-child b {
+  display: block;
+  color: #e9eef7 !important;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.service-row > span:first-child small {
+  display: block;
+  margin-top: 4px;
+  color: #59687d !important;
+  font-size: 9px;
+}
+
+.service-risk {
+  color: #dce5f1 !important;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.empty-services {
+  background: #0c121d !important;
+  color: #8b99ad !important;
+  padding: 20px !important;
+}
